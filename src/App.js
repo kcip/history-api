@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import './App.scss';
+import SearchResults from './pages/SearchResults/SearchResults';
+import backgroundIMG from '../src/img/bg2.jpg'
+import Details from '../src/components/Details/Details'
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ return (
+  <div className="App background-img pattern" style={{ backgroundImage: `url(${backgroundIMG})` }}>
+   <Header />
+   <div className='sticky'>
+    <SearchResults />
+    <Details />
+   </div>
+
+   <Footer />
+  </div>
+ );
 }
 
 export default App;

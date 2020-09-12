@@ -1,0 +1,42 @@
+header {
+ background-size: cover;
+ background-position: bottom;
+ position: relative;
+ height: 90px;
+ width: 100vw;
+ 
+}
+.header-content-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ height: 100%;
+ width: 100%;
+ padding-left: 40px;
+ padding-right: 40px;
+}
+.headerText {
+ text-transform: uppercase;
+ font-weight: normal;
+ font-size: 26px;
+ letter-spacing: 10px;
+ text-align: left;
+ color: #FFF;
+ position: relative;
+
+  &::before {
+   content: "{";
+  }
+
+  &::after {
+   content: "}";
+  }
+}
+.logo {
+ z-index: 3;
+ max-width: 250px;
+ margin: 15px 0;
+ position: absolute;
+ left: 50%;
+transform: translate(-50%, 27%);
+}

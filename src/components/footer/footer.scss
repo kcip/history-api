@@ -1,0 +1,28 @@
+footer {
+ height: 188px;
+}
+.navLinks {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 90%;
+ margin: 0 auto;
+ border-bottom: 1px solid #000;
+
+  a {
+   margin: 10px;
+    line-height: 50px;
+    color: #000;
+
+     &:hover {
+     text-decoration: underline;
+     }
+  }
+}
+
+.line-span {
+ height: 1px;
+ width: 90%;
+ margin: 0 auto;
+ background: #000;
+}

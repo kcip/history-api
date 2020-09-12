@@ -1,0 +1,59 @@
+.subNav {
+height: 225px;
+padding: 50px 0;
+display: flex;
+min-width: 100vw;
+
+}
+
+.subNav-text {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+}
+.subNav-h1 {
+  padding: 20px 0;
+  text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+    color: #000;
+    letter-spacing: 10px;
+   &::before{
+    content: '{'
+   }
+   &::after {
+    content: '}'
+   }
+}
+
+.subNav-h4 {
+ text-transform: uppercase;
+ text-align: center;
+    margin: 30px 0;
+    font-size: 24px;
+}
+.project-details {
+ display: flex;
+ flex-direction: row;
+ align-items: center;  
+ min-width: 100vw;
+ background-color: #826f4c;
+ padding: 10px 0;
+
+  a {
+   text-transform: uppercase;
+   color: #FFF;
+   letter-spacing: 5px;
+   font-size: 14px;
+   
+  }
+}
+
+.span-spacing,
+.subNav-links {
+ width: 25%;
+ display: flex;
+ justify-content: center;
+}
