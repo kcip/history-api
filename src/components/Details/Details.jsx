@@ -1,29 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
-import { array } from '../../services/apiData.php'
-export default function Details() {
- const [info, setInfo] = useState([])
+import React, { useState, useEffect, Fragment } from 'react';
+import Card from '../Card/Card'
+import Pagination from '../Pagination/Pagination'
+export default function Details(props) {
+
+ const [pages, setPages] = useState([])
+ const [loading, setLoading] = useState(false)
+ const [currentPage, setCurrentPage] = useState(1)
+ const [storyPerPage] = useState(5)
 
  useEffect(() => {
-  fetchData()
- });
+  const propsDetails = props.details
+  setLoading(true);
+  setPages(propsDetails)
+  setLoading(false)
+  console.log(pages)
+ }, [pages])
 
- const fetchData = async () => {
-  // let url = `../../services/api.php`;
-  axios.get(array)
-   .then(response => {
-    console.log(response.data)
-   })
-   .catch(error => {
-    console.log(error)
-   })
-
- }
+ //get story #'s
+ const indexOfLastStory = currentPage * storyPerPage;
+ const indexOfFirstStory = indexOfLastStory - storyPerPage;
+ const currentStory = pages.slice(indexOfFirstStory, indexOfLastStory)
+ const paginiate = pageNumber => setCurrentPage(pageNumber)
 
  return (
-  <div>
-   {console.log(array)}
-  </div>
+  <Fragment>
+   <div className="card-container">
+    {
+     currentStory
+      // props.details && props.details
+      .filter((item, idx) => idx < storyPerPage)
+      .map((item) => (
+       <Card key={item.id} item={item} />
+      ))
+    }
+
+   </div>
+   <Pagination
+    storyPerPage={storyPerPage}
+    totalStories={pages.length}
+    paginate={paginiate}
+
+   />
+  </Fragment>
+
+
+
+
  )
 }
 

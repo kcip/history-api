@@ -2,6 +2,7 @@
 height: 225px;
 padding: 50px 0;
 display: flex;
+flex-direction: column;
 min-width: 100vw;
 
 }
@@ -40,7 +41,7 @@ width: 100%;
  align-items: center;  
  min-width: 100vw;
  background-color: #826f4c;
- padding: 10px 0;
+ padding: 12px 0;
 
   a {
    text-transform: uppercase;
@@ -50,7 +51,17 @@ width: 100%;
    
   }
 }
+.results-container {
+ display: flex;
+ align-items: center;
+ width: 90%;
+ justify-content: flex-end;
+ margin: 0 auto;
 
+  h5 {
+   margin-top: -25px;
+  }
+}
 .span-spacing,
 .subNav-links {
  width: 25%;

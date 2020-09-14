@@ -1,5 +1,7 @@
 footer {
  height: 188px;
+ padding-top: 50px;
+ margin-bottom: 50px;
 }
 .navLinks {
  display: flex;
@@ -25,4 +27,13 @@ footer {
  width: 90%;
  margin: 0 auto;
  background: #000;
+}
+
+.social-container {
+ display: flex;
+ width: 75%;
+ padding: 10px 50px;
+ justify-content: flex-end;
+ margin-top: 20px;
+ margin: 20px auto 0 auto;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Social from '../social/Social'
+
+import BlackTwitterImg from '../../img/social/twitter_b.png'
+import BlackFacebookImg from '../../img/social/facebook_b.png'
 import './footer.scss'
 export default function Footer() {
  return (
@@ -14,7 +16,8 @@ export default function Footer() {
     </div>
     <span className="line-span"></span>
     <div className="social-container">
-     <Social />
+     <img className='social-icons' style={{ maxWidth: '31px' }} src={BlackTwitterImg} alt='twitter social icon' />
+     <img className='social-icons' style={{ maxWidth: '31px' }} src={BlackFacebookImg} alt='facebook social icon' />
     </div>
    </div>
   </footer>

@@ -6,7 +6,7 @@ export default function Nav() {
   <nav>
    <ul>
     <li>
-     <NavLink to='/about-us'>
+     <NavLink to='/about'>
       about us
      </NavLink>
     </li>

@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from "react-router-dom"
 import Nav from '../nav/Nav'
 import logo from '../../img/shape2.png'
 import Social from '../social/Social'
@@ -9,7 +10,10 @@ export default function Header() {
   <Fragment>
    <header style={{ backgroundImage: `url(${headerIMG})` }}>
     <div className="header-content-container">
-     <h1 className='headerText'>Sample Site</h1>
+     <Link to="/">
+      <h1 className='headerText'>Sample Site</h1>
+     </Link>
+
      <img className='logo' src={logo} alt='site logo' />
      <Social />
     </div>
